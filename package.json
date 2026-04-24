@@ -1,0 +1,13 @@
+{
+  "name": "almaty-walk-case",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CS:GO-style case roulette for picking an evening walk idea in Almaty. Pure static HTML, deployed to Cloudflare Workers.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.83.0"
+  }
+}

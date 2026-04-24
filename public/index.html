@@ -1,0 +1,1623 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ALMATY WALK CASE · Открой прогулку</title>
+<meta name="description" content="Рулетка прогулок в Алматы. 40+ идей вечерней прогулки: парки, кафе, кино, квесты, смотровые. Крути кейс — судьба решит." />
+
+<!-- OG / Twitter -->
+<meta property="og:title" content="Almaty Walk Case — рулетка прогулок" />
+<meta property="og:description" content="40+ вечерних активностей Алматы в стиле CS:GO кейса. Крути и открывай." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ru_RU" />
+<meta name="twitter:card" content="summary" />
+<meta name="theme-color" content="#0a0e13" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+
+<!-- Google Analytics 4 — замени G-XXXXXXXXXX на свой Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg-0: #0a0e13;
+    --bg-1: #10161c;
+    --bg-2: #1a2028;
+    --bg-3: #242d37;
+    --panel: #1e2630;
+    --stroke: rgba(255, 255, 255, 0.07);
+    --stroke-2: rgba(255, 255, 255, 0.12);
+    --text: #c7d5e0;
+    --text-dim: #7a8c99;
+    --accent: #f1a632;
+    --accent-2: #ffbd4a;
+
+    --r-consumer: #b0c3d9;
+    --r-industrial: #5e98d9;
+    --r-milspec: #4b69ff;
+    --r-restricted: #8847ff;
+    --r-classified: #d32ce6;
+    --r-covert: #eb4b4b;
+    --r-rare: #ffd700;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    min-height: 100%;
+    background: var(--bg-0);
+    color: var(--text);
+    font-family: "Rajdhani", "Chakra Petch", sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body {
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(75, 105, 255, 0.08), transparent 50%),
+      radial-gradient(ellipse at 80% 10%, rgba(241, 166, 50, 0.05), transparent 50%),
+      linear-gradient(180deg, #0a0e13 0%, #10161c 40%, #0a0e13 100%);
+    position: relative;
+  }
+
+  /* diagonal pattern backdrop */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 24px,
+        rgba(255,255,255,0.015) 24px,
+        rgba(255,255,255,0.015) 25px
+      );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .shell {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+
+  /* ——— HEADER ——— */
+  header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 6px 16px;
+    border: 1px solid rgba(241, 166, 50, 0.4);
+    border-radius: 2px;
+    background: rgba(241, 166, 50, 0.05);
+    margin-bottom: 18px;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 6.5vw, 62px);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  h1 .accent {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .sub {
+    margin-top: 14px;
+    color: var(--text-dim);
+    font-size: clamp(13px, 1.9vw, 15px);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+
+  /* stats bar */
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .stat b {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-top: 2px;
+  }
+
+  /* ——— CASE CONTAINER ——— */
+  .case {
+    margin: 40px 0 28px;
+    background: linear-gradient(180deg, #13191f 0%, #0e1318 100%);
+    border: 1px solid var(--stroke);
+    border-radius: 4px;
+    position: relative;
+    padding: 54px 0;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.04),
+      inset 0 -1px 0 rgba(0,0,0,0.4),
+      0 20px 60px -20px rgba(0,0,0,0.6);
+  }
+
+  .case::before, .case::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    pointer-events: none;
+    z-index: 3;
+  }
+  .case::before {
+    left: 0;
+    background: linear-gradient(90deg, #0e1318 0%, transparent 100%);
+  }
+  .case::after {
+    right: 0;
+    background: linear-gradient(-90deg, #0e1318 0%, transparent 100%);
+  }
+
+  /* pointers */
+  .pointer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 0;
+    height: 0;
+    filter: drop-shadow(0 0 8px rgba(241, 166, 50, 0.8));
+  }
+  .pointer.top {
+    top: 10px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 16px solid var(--accent);
+  }
+  .pointer.bottom {
+    bottom: 10px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 16px solid var(--accent);
+  }
+
+  /* center guideline */
+  .case-guide {
+    position: absolute;
+    top: 38px; bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: linear-gradient(180deg, transparent 0%, rgba(241, 166, 50, 0.35) 20%, rgba(241, 166, 50, 0.35) 80%, transparent 100%);
+    z-index: 4;
+    pointer-events: none;
+  }
+
+  .case-viewport {
+    overflow: hidden;
+    position: relative;
+    padding: 4px 0;
+  }
+
+  .reel {
+    display: flex;
+    gap: 8px;
+    will-change: transform;
+    padding: 0 8px;
+  }
+  .reel.spinning {
+    transition: transform 6.5s cubic-bezier(0.08, 0.72, 0.14, 1);
+  }
+
+  /* ——— ITEM CARD ——— */
+  .item {
+    position: relative;
+    width: 170px;
+    min-width: 170px;
+    height: 210px;
+    background: linear-gradient(180deg, #2a323b 0%, #1a2028 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 12px 14px;
+    overflow: hidden;
+    font-family: "Chakra Petch", sans-serif;
+    flex-shrink: 0;
+  }
+  .item::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 60%;
+    background: linear-gradient(180deg, transparent 0%, var(--rarity-bg) 100%);
+    pointer-events: none;
+  }
+  .item::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 4px;
+    background: var(--rarity);
+    box-shadow: 0 0 12px var(--rarity);
+  }
+
+  .item-icon {
+    font-size: 40px;
+    line-height: 1;
+    margin-top: 8px;
+    margin-bottom: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    position: relative;
+    z-index: 1;
+  }
+  .item-cat {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    margin-bottom: 6px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.2;
+  }
+  .item-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    line-height: 1.15;
+    position: relative;
+    z-index: 1;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* rarity color variants */
+  .rare-consumer   { --rarity: #b0c3d9; --rarity-bg: rgba(176, 195, 217, 0.22); }
+  .rare-industrial { --rarity: #5e98d9; --rarity-bg: rgba(94, 152, 217, 0.22); }
+  .rare-milspec    { --rarity: #4b69ff; --rarity-bg: rgba(75, 105, 255, 0.22); }
+  .rare-restricted { --rarity: #8847ff; --rarity-bg: rgba(136, 71, 255, 0.25); }
+  .rare-classified { --rarity: #d32ce6; --rarity-bg: rgba(211, 44, 230, 0.25); }
+  .rare-covert     { --rarity: #eb4b4b; --rarity-bg: rgba(235, 75, 75, 0.28); }
+  .rare-rare       { --rarity: #ffd700; --rarity-bg: rgba(255, 215, 0, 0.3); }
+
+  /* ——— CONTROLS ——— */
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn-open {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    padding: 18px 44px;
+    color: #0a0e13;
+    background: linear-gradient(180deg, var(--accent-2) 0%, var(--accent) 100%);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+    box-shadow:
+      0 0 0 1px rgba(255, 189, 74, 0.3),
+      0 6px 0 #a86d0d,
+      0 10px 20px -4px rgba(241, 166, 50, 0.4);
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  }
+  .btn-open:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08);
+  }
+  .btn-open:active {
+    transform: translateY(3px);
+    box-shadow:
+      0 0 0 1px rgba(255, 189, 74, 0.3),
+      0 2px 0 #a86d0d,
+      0 4px 10px -4px rgba(241, 166, 50, 0.3);
+  }
+  .btn-open:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* secondary button */
+  .btn-ghost {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 16px 24px;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--stroke-2);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  /* ——— RESULT OVERLAY ——— */
+  .result-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 14, 19, 0);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 100;
+    pointer-events: none;
+    transition: background 0.35s ease, backdrop-filter 0.35s ease;
+  }
+  .result-overlay.show {
+    background: rgba(10, 14, 19, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    pointer-events: auto;
+  }
+
+  .result-card {
+    position: relative;
+    width: min(92vw, 440px);
+    background: linear-gradient(180deg, #1a2028 0%, #10161c 100%);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    padding: 36px 28px 28px;
+    font-family: "Chakra Petch", sans-serif;
+    transform: scale(0.85) translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.2), opacity 0.4s ease;
+  }
+  .result-overlay.show .result-card {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  /* glow around result */
+  .result-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, transparent 0%, var(--r-color) 100%);
+    opacity: 0.5;
+    filter: blur(22px);
+    z-index: -1;
+  }
+  .result-card::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 5px;
+    background: var(--r-color);
+    box-shadow: 0 0 24px var(--r-color);
+  }
+
+  .result-tier {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--r-color);
+    padding: 4px 10px;
+    border: 1px solid var(--r-color);
+    border-radius: 2px;
+    margin-bottom: 16px;
+  }
+  .result-big-icon {
+    font-size: 76px;
+    line-height: 1;
+    text-align: center;
+    margin: 10px 0 18px;
+    filter: drop-shadow(0 4px 20px var(--r-color));
+  }
+  .result-cat {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .result-name {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .result-desc {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .result-tip {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 13px;
+    color: var(--accent);
+    text-align: center;
+    padding: 10px 12px;
+    border: 1px dashed rgba(241, 166, 50, 0.3);
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  .result-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .result-actions a, .result-actions button {
+    flex: 1;
+    min-width: 140px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 14px 12px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: filter 0.15s ease, background 0.15s ease;
+  }
+  .result-actions .map-btn {
+    background: var(--r-color);
+    color: #0a0e13;
+  }
+  .result-actions .map-btn:hover { filter: brightness(1.1); }
+
+  .result-actions .again-btn {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    border: 1px solid var(--stroke-2);
+  }
+  .result-actions .again-btn:hover { background: rgba(255, 255, 255, 0.1); }
+
+  .result-close {
+    position: absolute;
+    top: 10px; right: 10px;
+    width: 28px; height: 28px;
+    border: none;
+    background: transparent;
+    color: var(--text-dim);
+    font-family: "Chakra Petch";
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+  .result-close:hover { color: #fff; }
+
+  /* ——— INVENTORY / LIST ——— */
+  .inventory {
+    margin-top: 60px;
+    border-top: 1px solid var(--stroke);
+    padding-top: 32px;
+  }
+  .inv-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .inv-title {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .rarity-legend {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .legend-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .legend-chip::before {
+    content: "";
+    width: 10px; height: 10px;
+    background: var(--c);
+    box-shadow: 0 0 6px var(--c);
+  }
+
+  .inv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  .inv-item {
+    position: relative;
+    padding: 14px 10px 12px;
+    background: linear-gradient(180deg, #1e2630 0%, #141a20 100%);
+    border: 1px solid var(--stroke);
+    border-bottom: 3px solid var(--rarity);
+    font-family: "Chakra Petch", sans-serif;
+    text-align: center;
+  }
+  .inv-item .ic { font-size: 22px; line-height: 1; margin-bottom: 6px; }
+  .inv-item .nm { font-size: 12px; font-weight: 600; color: #fff; line-height: 1.2; }
+
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  /* ——— EXCLUSION TOGGLE INSIDE INVENTORY ——— */
+  .inv-item {
+    cursor: default;
+    transition: opacity 0.25s ease, filter 0.25s ease;
+  }
+  .inv-item.excluded {
+    opacity: 0.3;
+    filter: grayscale(100%);
+  }
+  .inv-item.excluded:hover { opacity: 0.55; }
+  .exc-toggle {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+    z-index: 2;
+    padding: 0;
+  }
+  .inv-item:hover .exc-toggle,
+  .inv-item.excluded .exc-toggle {
+    opacity: 1;
+  }
+  .exc-toggle:hover {
+    background: #eb4b4b;
+    color: #fff;
+    border-color: #eb4b4b;
+  }
+  .inv-item.excluded .exc-toggle {
+    background: rgba(75, 105, 255, 0.25);
+    border-color: #4b69ff;
+    color: #8aa8ff;
+  }
+  .inv-item.excluded .exc-toggle:hover {
+    background: #4b69ff;
+    color: #fff;
+  }
+
+  /* ——— HISTORY SECTION ——— */
+  .history {
+    margin-top: 48px;
+    border-top: 1px solid var(--stroke);
+    padding-top: 32px;
+  }
+  .history-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .history-title {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .history-count {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-left: 10px;
+  }
+  .history-clear {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    background: transparent;
+    border: 1px solid var(--stroke-2);
+    border-radius: 3px;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .history-clear:hover {
+    color: #eb4b4b;
+    border-color: rgba(235, 75, 75, 0.5);
+    background: rgba(235, 75, 75, 0.05);
+  }
+  .history-clear.confirm {
+    color: #eb4b4b;
+    border-color: #eb4b4b;
+    background: rgba(235, 75, 75, 0.15);
+    animation: pulseRed 0.8s ease-in-out infinite alternate;
+  }
+  @keyframes pulseRed {
+    from { box-shadow: 0 0 0 0 rgba(235, 75, 75, 0.4); }
+    to   { box-shadow: 0 0 0 6px rgba(235, 75, 75, 0); }
+  }
+  .history-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .history-entry {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: linear-gradient(180deg, #1e2630 0%, #141a20 100%);
+    border: 1px solid var(--stroke);
+    border-left: 3px solid var(--rarity);
+    font-family: "Chakra Petch", sans-serif;
+  }
+  .history-entry .h-icon { font-size: 22px; line-height: 1; flex-shrink: 0; }
+  .history-entry .h-body { flex: 1; min-width: 0; }
+  .history-entry .h-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.15;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .history-entry .h-meta {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 3px;
+  }
+  .history-entry.rare-rare .h-meta { color: #ffd700; }
+  .history-empty {
+    grid-column: 1 / -1;
+    padding: 28px 20px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+    font-family: "Chakra Petch", sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px dashed var(--stroke);
+    border-radius: 3px;
+  }
+
+  /* ——— RESULT EXCLUDE BUTTON ——— */
+  .result-actions .exclude-btn {
+    flex: 0 1 auto;
+    min-width: 100px;
+    background: transparent;
+    border: 1px solid var(--stroke-2);
+    color: var(--text-dim);
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 14px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .result-actions .exclude-btn:hover:not(:disabled) {
+    background: rgba(235, 75, 75, 0.1);
+    border-color: #eb4b4b;
+    color: #eb4b4b;
+  }
+  .result-actions .exclude-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  /* ——— MOBILE ——— */
+  @media (max-width: 520px) {
+    .item {
+      width: 130px;
+      min-width: 130px;
+      height: 175px;
+      padding: 16px 8px 12px;
+    }
+    .item-icon { font-size: 32px; margin-top: 4px; }
+    .item-name { font-size: 12px; min-height: 28px; }
+    .item-cat { font-size: 9px; }
+    .case { padding: 46px 0; }
+    .btn-open { padding: 16px 32px; font-size: 12px; letter-spacing: 0.2em; }
+    .result-big-icon { font-size: 60px; }
+    .result-name { font-size: 22px; }
+    .stats { gap: 20px; }
+    .stat b { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <header>
+    <div class="eyebrow">Almaty walk night · case opening</div>
+    <h1>Открой кейс<br><span class="accent">Прогулки</span></h1>
+    <p class="sub">40 вечерних активностей Алматы + 2 редких дропа. Нажми — и судьба решит, куда вы идёте сегодня.</p>
+
+    <div class="stats">
+      <div class="stat">Items <b id="stat-items">42</b></div>
+      <div class="stat">Rarities <b>7</b></div>
+      <div class="stat">Rare drop <b id="stat-rare">1.5%</b></div>
+    </div>
+  </header>
+
+  <section class="case" aria-label="Кейс">
+    <div class="pointer top" aria-hidden="true"></div>
+    <div class="pointer bottom" aria-hidden="true"></div>
+    <div class="case-guide" aria-hidden="true"></div>
+
+    <div class="case-viewport" id="viewport">
+      <div class="reel" id="reel"></div>
+    </div>
+  </section>
+
+  <div class="controls">
+    <button class="btn-open" id="open-btn">Открыть кейс</button>
+    <button class="btn-ghost" id="shuffle-btn">Перемешать</button>
+  </div>
+
+  <section class="inventory">
+    <div class="inv-head">
+      <h2 class="inv-title">Все предметы кейса</h2>
+      <div class="rarity-legend">
+        <span class="legend-chip" style="--c:#b0c3d9">Consumer</span>
+        <span class="legend-chip" style="--c:#5e98d9">Industrial</span>
+        <span class="legend-chip" style="--c:#4b69ff">Mil-Spec</span>
+        <span class="legend-chip" style="--c:#8847ff">Restricted</span>
+        <span class="legend-chip" style="--c:#d32ce6">Classified</span>
+        <span class="legend-chip" style="--c:#eb4b4b">Covert</span>
+        <span class="legend-chip" style="--c:#ffd700">★ Rare</span>
+      </div>
+    </div>
+    <div class="inv-grid" id="inv-grid"></div>
+  </section>
+
+  <section class="history">
+    <div class="history-head">
+      <h2 class="history-title">История выпадений<span class="history-count" id="history-count"></span></h2>
+      <button class="history-clear" id="history-clear">Очистить</button>
+    </div>
+    <div class="history-list" id="history-list"></div>
+  </section>
+
+  <footer>almaty · walk case · v1.0</footer>
+
+</div>
+
+<!-- Result overlay -->
+<div class="result-overlay" id="result-overlay">
+  <div class="result-card" id="result-card">
+    <button class="result-close" id="result-close" aria-label="Закрыть">✕</button>
+    <div style="text-align:center">
+      <span class="result-tier" id="r-tier">Mil-Spec</span>
+    </div>
+    <div class="result-big-icon" id="r-icon">🎬</div>
+    <div class="result-cat" id="r-cat">Категория</div>
+    <div class="result-name" id="r-name">Название</div>
+    <p class="result-desc" id="r-desc">Описание</p>
+    <div class="result-tip" id="r-tip">💡 Совет</div>
+    <div class="result-actions">
+      <a class="map-btn" id="r-map" target="_blank" rel="noopener">Открыть в картах</a>
+      <button class="exclude-btn" id="r-exclude" title="Убрать из колеса">Убрать</button>
+      <button class="again-btn" id="r-again">Ещё кейс</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ————————— GA4 TRACKING —————————
+function track(event, params = {}) {
+  try {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", event, params);
+    }
+  } catch (e) { /* silent */ }
+}
+
+// ————————— PLACES —————————
+const places = [
+  // COVERT
+  { name: "Кок-Тобе", cat: "Вид · канатка", icon: "🌃", rarity: "industrial",
+    desc: "Канатка наверх, парк аттракционов, Алматинское яблоко на смотровой и огни города под ногами. Классика на все времена.",
+    tip: "Поднимайтесь после заката — эффект максимальный.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Kok+Tobe+Almaty&query_place_id=ChIJcedU5rxmgzgR3AgVzuP1we4" },
+  { name: "Медеу", cat: "Горы · прогулка", icon: "⛰️", rarity: "industrial",
+    desc: "Легендарная дамба, 842 ступеньки вверх (кто первый задохнётся), горный воздух и виды. Каток на реконструкции до 2028 — но плотина, ступени и горы никуда не делись.",
+    tip: "Термос с чаем и фонарик — вечером на ступенях темно.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Medeu+Almaty" },
+
+  // CLASSIFIED
+  { name: "Парк Горького", cat: "Аттракционы", icon: "🎡", rarity: "milspec",
+    desc: "Колесо обозрения, карусели, тир, сахарная вата, катамараны на озере. Простой олдскульный вечер «как в детстве». Сам парк открыт всегда, аттракционы — с апреля по октябрь, до 20-21.",
+    tip: "В 5-6 вечера аттракционы ещё работают — успеете на колесо до закрытия.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Central+Park+Gorky+Almaty" },
+  { name: "Караоке-клуб", cat: "Петь вдвоём", icon: "🎤", rarity: "classified",
+    desc: "Кабинет на пару часов, микрофон, любые хиты. Первые 10 минут страшно — потом не остановить.",
+    tip: "Начните с «Руки Вверх» — лёд треснет сразу.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=karaoke+Almaty" },
+  { name: "Каток Halyk Arena", cat: "Коньки", icon: "⛸️", rarity: "classified",
+    desc: "Крытый каток, работает круглый год. Держаться за руки — законный повод, если кто-то еле стоит на льду.",
+    tip: "Будни вечером — народа меньше, льда больше.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Halyk+Arena+Almaty" },
+  { name: "Кино в Mega Silk Way", cat: "Кино + фудкорт", icon: "🎬", rarity: "classified",
+    desc: "Большой ТРЦ, Kinopark, огромный фудкорт. Схема: кино → поесть → пройтись.",
+    tip: "Будний вечер — билеты дешевле.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Mega+Silk+Way+Almaty" },
+
+  // RESTRICTED
+  { name: "Квест-комната", cat: "Квест на час", icon: "🧩", rarity: "covert",
+    desc: "Закрывают в комнате — решайте загадки, чтобы выйти. Сближает моментально.",
+    tip: "Страшный квест — ещё больший буст.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=quest+room+Almaty" },
+  { name: "Лазертаг", cat: "Активно", icon: "🎯", rarity: "covert",
+    desc: "Тёмная арена, лазерные пистолеты, бегать и стрелять. Адреналин, смех, ноль формальности.",
+    tip: "Оденьтесь удобно — будете приседать и бегать.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=lasertag+Almaty" },
+  { name: "Боулинг Cosmica (Mega)", cat: "Боулинг", icon: "🎳", rarity: "classified",
+    desc: "Боулинг и игровые автоматы в Mega Park. Кидать шары, смеяться над промахами, не париться.",
+    tip: "Проигравший платит за колу — лёгкий флирт на автомате.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Cosmica+bowling+Almaty" },
+  { name: "Боулинг Chaplin", cat: "Боулинг · центр", icon: "🎳", rarity: "classified",
+    desc: "Боулинг в Dostyk Plaza. Компактно, в центре, легко совместить с кино или ужином.",
+    tip: "Две партии — оптимум. Дальше уже устаёте смеяться.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Chaplin+bowling+Dostyk+Plaza+Almaty" },
+  { name: "Стендап / open mic", cat: "Комедия", icon: "🎙️", rarity: "restricted",
+    desc: "Живой стендап в Алматы: билеты недорогие, смеха много. Отличный способ расслабить атмосферу.",
+    tip: "Проверьте афишу Stand Up Almaty в Instagram.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=stand+up+comedy+Almaty" },
+  { name: "PS / комп-клуб", cat: "Игры вдвоём", icon: "🎮", rarity: "milspec",
+    desc: "FIFA, Mortal Kombat, гонки на раздельном экране. Нетипичная прогулка, но огонь для геймерских вайбов.",
+    tip: "FIFA + «проигравший платит ужин» — классика.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=PlayStation+club+Almaty" },
+
+  // MIL-SPEC
+  { name: "Кино в Dostyk Plaza", cat: "Кино + ужин", icon: "🎞️", rarity: "classified",
+    desc: "Kinopark в самом центре, десятки простых мест поесть рядом. Классический вечерний вариант.",
+    tip: "Берите что-то лёгкое — не ужастик.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Dostyk+Plaza+Almaty" },
+  { name: "Парк Первого Президента", cat: "Большой парк · аллеи", icon: "🌳", rarity: "industrial",
+    desc: "Огромный парк на юге города: аллеи, скамейки, мостики, смотровая с видом на горы. Фонтаны сейчас выключены — но гулять и без них приятно.",
+    tip: "От главного входа дойдите до верхней площадки — виды на Алатау.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=First+President+Park+Almaty" },
+  { name: "Антикафе", cat: "Настолки · чай", icon: "🎲", rarity: "restricted",
+    desc: "Платишь за время. Десятки настолок, чай-печеньки, диваны. Формат на 3+ часа разговоров.",
+    tip: "«Диксит» или «Кодовые имена» — топ на двоих.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=anticafe+boardgames+Almaty" },
+  { name: "Бильярд", cat: "Пул · снукер", icon: "🎱", rarity: "restricted",
+    desc: "Стол на час, учите друг друга держать кий. Неторопливо, ненавязчивый флирт.",
+    tip: "Необязательно уметь — половина фана в промахах.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=billiards+club+Almaty" },
+  { name: "Рамен-бар", cat: "Суп-рамен", icon: "🍜", rarity: "restricted",
+    desc: "Горячая миска, барная стойка, пар от супа между вами. Зимой — идеально.",
+    tip: "Тонкоцу — самый жирный и классический.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=ramen+bar+Almaty" },
+  { name: "Honest Coffeehouse", cat: "Кафе до полуночи", icon: "🥐", rarity: "milspec",
+    desc: "Тёплый свет, завтраки-весь-день, работает до 12 ночи. Идеально после кино.",
+    tip: "Горячий шоколад здесь — отдельная причина прийти.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Honest+Coffeehouse+Almaty&query_place_id=ChIJPfNXxIxugzgRE6JhijWGhl4" },
+  { name: "Agosto Coffee", cat: "Кафе в парке", icon: "🌳", rarity: "milspec",
+    desc: "Прямо внутри парка Панфилова. Прогулка → кофе → Арбат через дорогу. Простая отличная логистика.",
+    tip: "Матча на кокосовом — фирменная.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Agosto+coffee+Almaty&query_place_id=ChIJf27wUudvgzgRM1qCeHmy5dM" },
+  { name: "Jump-in-Goat", cat: "Спешелти кофе", icon: "📚", rarity: "milspec",
+    desc: "Тихое место на Абая: книги, мягкие кресла, хороший кофе. Формат «поговорить часа два», но работает до 21:00 — так что приходите к 18-19.",
+    tip: "10 минут пешком до Арбата — можно совместить прогулкой.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Jump+in+Goat+Coffee+Almaty&query_place_id=ChIJUVv7KdBugzgRjpq4r5Zv_hE" },
+
+  // INDUSTRIAL
+  { name: "Ботанический сад", cat: "Тихая прогулка", icon: "🌿", rarity: "industrial",
+    desc: "Тихие аллеи, редкие деревья, после реновации Фонда Утемуратова — одно из самых красивых мест города. Работает до 20:00, но касса закрывается в 18:00.",
+    tip: "Приходите не позже 17:30 — иначе просто не пустят.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Botanical+Garden+Almaty" },
+  { name: "Терренкур", cat: "Пешеходная зона", icon: "🌊", rarity: "consumer",
+    desc: "Благоустроенная пешеходка вдоль реки Есентай: фонари, деревянные мостики, велодорожки, арт-объекты, кафе по пути. Одна из лучших вечерних прогулок в Алматы.",
+    tip: "Начните от Esentai Park и идите вверх (к горам) или вниз — любое направление огонь.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Terrenkur+Esentai+Almaty" },
+  { name: "Esentai Park", cat: "Парк · озеро", icon: "🌲", rarity: "industrial",
+    desc: "Современный парк с озером, уточками, велодорожками. Кофе с собой + самокат = кайф.",
+    tip: "Подсветка на мосту вечером — фотогенично.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Esentai+Park+Almaty" },
+  { name: "Nedelka", cat: "Уютное кафе", icon: "☕", rarity: "milspec",
+    desc: "Кафе на Абая — супы, сэндвичи, десерты. «Встретиться и поболтать три часа».",
+    tip: "До 23:00 — некуда торопиться.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Nedelka+Almaty&query_place_id=ChIJi7zndOhugzgRMshuzENIM2Q" },
+  { name: "Парк Панфилова", cat: "Парк + собор", icon: "⛪", rarity: "consumer",
+    desc: "Подсветка Зенковского собора, голуби, лавочки. Бесплатно, красиво, в 5 минутах от Арбата.",
+    tip: "Совместите с Agosto внутри парка.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Panfilov+Park+Zenkov+Cathedral+Almaty" },
+
+  // CONSUMER
+  { name: "Арбат (Жибек Жолы)", cat: "Пешеходка", icon: "🚶", rarity: "consumer",
+    desc: "Центр, уличные музыканты, художники, кофе на вынос. Бесплатное развлечение на весь вечер.",
+    tip: "Захватите кэш — на музыкантов и карикатуру.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Arbat+Zhibek+Zholy+Almaty" },
+  { name: "Мороженое + прогулка", cat: "Простейший план", icon: "🍦", rarity: "consumer",
+    desc: "Купить по рожку и идти: Панфилова → Арбат → Абая. Бесплатно и работает всегда.",
+    tip: "Запомните её любимый вкус. Пригодится.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Arbat+Almaty+ice+cream" },
+  { name: "Del Papa", cat: "Пиццерия", icon: "🍕", rarity: "restricted",
+    desc: "Простая сетевая пиццерия, большие пиццы, нормальные цены, без снобизма.",
+    tip: "Одна большая на двоих — дешевле и повод поделиться.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Del+Papa+pizza+Almaty" },
+  { name: "Booho Burgers", cat: "Бургерная", icon: "🍔", rarity: "restricted",
+    desc: "Крафтовые бургеры, картошка, милкшейки. Без приборов, без претензий — вкусно и по-домашнему.",
+    tip: "Бургеры по одному + картошка на двоих.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Booho+burger+Almaty" },
+  { name: "Пешеходная Панфилова", cat: "Пешеходка · сквер", icon: "🌆", rarity: "consumer",
+    desc: "Пешеходный участок улицы Панфилова от Кабанбай батыра: сквер с фонтаном, скамейки, уличные музыканты. Альтернатива Арбату, но тише и менее туристично.",
+    tip: "Вечером здесь красивая подсветка — лучше идти уже после заката.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Panfilov+street+pedestrian+Almaty" },
+
+  // ★ RARE SPECIAL
+  { name: "★ Каменское плато", cat: "Звёздная смотровая", icon: "✨", rarity: "rare",
+    desc: "Редкий дроп: поехать ночью на серпантин к Каменскому плато, смотреть на звёзды и огни Алматы сверху. Нужна машина и термос.",
+    tip: "Возьмите одеяло — ночи прохладные даже летом.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Kamenskoe+Plato+Almaty" },
+
+  { name: "★ Роща Баума", cat: "Легендарный лес", icon: "🌲", rarity: "rare",
+    desc: "Тебя там убьют — так что проведи свой последний вечер с кайфом. Большой сосново-берёзовый лес на северо-востоке, один из самых вайбовых мест города.",
+    tip: "Идите засветло и не в одиночку. Репутация у места противоречивая.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Roshcha+Bauma+Almaty" },
+
+  // === ДОПОЛНИТЕЛЬНЫЕ ПАРКИ И ПРОГУЛКИ ===
+
+  // CLASSIFIED
+  { name: "Площадь Республики", cat: "Монумент · масштаб", icon: "🏛️", rarity: "industrial",
+    desc: "Огромная площадь в Самале: Монумент Независимости 28 метров, бронзовые барельефы с историей Казахстана. Фонтаны включают ближе к маю — но подсветка и масштаб работают круглый год.",
+    tip: "Обойдите вокруг монумента — барельефы цепляют.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Republic+Square+Almaty" },
+
+  // RESTRICTED
+  { name: "Стрит-арт охота", cat: "Квест по муралам", icon: "🎨", rarity: "milspec",
+    desc: "В Алматы десятки крутых муралов: у Mega, на Тулебаева, в Сары-Арке. Соберите маршрут и фоткайтесь с каждым.",
+    tip: "Начните с мурала у Mega, потом двигайтесь к Сары-Арке.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Almaty+street+art+murals" },
+
+  // MIL-SPEC
+  { name: "Парк Ататюрк", cat: "Уютный парк · Самал", icon: "🌳", rarity: "industrial",
+    desc: "Ухоженный парк в Самале: аккуратные дорожки, лавочки, подсветка. Небольшой — на неспешный круг минут на 40. Хорошо после ужина.",
+    tip: "Парк компактный, не планируйте как основную точку — только дополнение к чему-то ещё.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Ataturk+Park+Almaty" },
+  { name: "Велопрогулка", cat: "Велики / самокаты", icon: "🚲", rarity: "industrial",
+    desc: "Взять велики или электросамокаты в Esentai Park или в парке ПП и прокатиться по дорожкам. Быстрее, чем пешком, веселее, чем в машине.",
+    tip: "Jet, Yandex Go — везде есть самокаты в аренду.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Esentai+Park+bike+rental+Almaty" },
+  { name: "Гастро-тур вечерний", cat: "Стрит-фуд", icon: "🍢", rarity: "restricted",
+    desc: "Маршрут по стрит-фуду: шашлычная → чайхана → пышечная → чай с халвой. Район Тулебаева или Панфилова — много простых мест в шаговой доступности.",
+    tip: "По 1-2 позиции в каждом месте — иначе объедитесь на второй точке.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Tulebayev+street+food+Almaty" },
+
+  // INDUSTRIAL
+  { name: "Дендропарк", cat: "Лесной массив", icon: "🌲", rarity: "industrial",
+    desc: "Большой зелёный массив с редкими деревьями и тихими аллеями. О нём мало кто помнит — поэтому и людей почти нет.",
+    tip: "Возьмите плед и кофе — на закате реально романтично.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Dendro+Park+Almaty" },
+  { name: "Набережная М. Алматинки", cat: "Вдоль реки", icon: "💧", rarity: "consumer",
+    desc: "Пройтись вдоль Малой Алматинки по оборудованным участкам: мостики, шум воды, тишина. Алматинский секрет.",
+    tip: "Отрезок от Абая вниз — самый приятный.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Malaya+Almatinka+river+promenade+Almaty" },
+  { name: "Сквер у Оперного", cat: "Мини-сквер", icon: "🎭", rarity: "consumer",
+    desc: "Ухоженный сквер у Театра оперы и балета им. Абая. Подсветка, скамейки, клумбы — микро-романтика в центре.",
+    tip: "Совместите с кофе в Jump-in-Goat в двух шагах.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Abai+Opera+Theatre+Almaty" },
+
+  // CONSUMER
+  { name: "Прогулка по Достыку", cat: "Проспект вечером", icon: "🌃", rarity: "consumer",
+    desc: "Пройти по Достыку от Абая вниз до Панфилова: фонари, деревья, кафе, ритм города. Бесплатно, атмосферно, долго.",
+    tip: "Останавливайтесь на кофе в любом месте по пути.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Dostyk+Avenue+Almaty" },
+  { name: "Прогулка по Абая", cat: "Главная ось города", icon: "🌆", rarity: "consumer",
+    desc: "Центральная улица вечером: широкая, подсвеченная, полная кафе. От Фурманова до Сейфуллина — приятный часовой маршрут.",
+    tip: "Финиш в Nedelka или Jump-in-Goat — оба по дороге.",
+    gmaps: "https://www.google.com/maps/search/?api=1&query=Abay+Avenue+Almaty" },
+];
+
+// weights — fair roll: все предметы равновероятны, только Rare реже
+const weights = {
+  consumer: 1.0,
+  industrial: 1.0,
+  milspec: 1.0,
+  restricted: 1.0,
+  classified: 1.0,
+  covert: 1.0,
+  rare: 0.3,
+};
+
+// rarity display names
+const rarityLabel = {
+  consumer: "Consumer Grade",
+  industrial: "Industrial Grade",
+  milspec: "Mil-Spec",
+  restricted: "Restricted",
+  classified: "Classified",
+  covert: "Covert",
+  rare: "★ Exceedingly Rare",
+};
+
+// ————————— STATE (history + exclusions, localStorage) —————————
+const STORAGE_KEY_HISTORY = "walkcase_history_v1";
+const STORAGE_KEY_EXCLUDED = "walkcase_excluded_v1";
+
+let dropHistory = [];
+let excluded = new Set();
+
+function loadState() {
+  try {
+    dropHistory = JSON.parse(localStorage.getItem(STORAGE_KEY_HISTORY) || "[]");
+    if (!Array.isArray(dropHistory)) dropHistory = [];
+    excluded = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY_EXCLUDED) || "[]"));
+  } catch (e) {
+    dropHistory = [];
+    excluded = new Set();
+  }
+}
+function saveState() {
+  try {
+    localStorage.setItem(STORAGE_KEY_HISTORY, JSON.stringify(dropHistory));
+    localStorage.setItem(STORAGE_KEY_EXCLUDED, JSON.stringify([...excluded]));
+  } catch (e) {}
+}
+
+loadState();
+
+// ————————— UTILS —————————
+function getAvailablePlaces() {
+  const avail = places.filter(p => !excluded.has(p.name));
+  // Fallback: если пользователь случайно исключил всё, возвращаем всё
+  return avail.length > 0 ? avail : places;
+}
+
+function pickWeighted() {
+  const pool = getAvailablePlaces();
+  const totalWeight = pool.reduce((s, p) => s + (weights[p.rarity] || 1), 0);
+  let r = Math.random() * totalWeight;
+  for (const p of pool) {
+    r -= weights[p.rarity] || 1;
+    if (r <= 0) return p;
+  }
+  return pool[pool.length - 1];
+}
+
+function pickRandom() {
+  // Filler items в ленте тоже уважают исключения —
+  // убранные предметы не должны мелькать в крутке
+  const pool = getAvailablePlaces();
+  const totalWeight = pool.reduce((s, p) => s + (weights[p.rarity] || 1), 0);
+  let r = Math.random() * totalWeight;
+  for (const p of pool) {
+    r -= weights[p.rarity] || 1;
+    if (r <= 0) return p;
+  }
+  return pool[pool.length - 1];
+}
+
+function itemHTML(p) {
+  return `
+    <div class="item rare-${p.rarity}">
+      <div class="item-icon">${p.icon}</div>
+      <div class="item-cat">${p.cat}</div>
+      <div class="item-name">${p.name}</div>
+    </div>
+  `;
+}
+
+// ————————— REEL —————————
+const reel = document.getElementById("reel");
+const viewport = document.getElementById("viewport");
+const openBtn = document.getElementById("open-btn");
+const shuffleBtn = document.getElementById("shuffle-btn");
+
+const CARD_W = 170; // keep in sync with CSS
+const GAP = 8;
+const STEP = CARD_W + GAP;
+const CARD_W_MOBILE = 130;
+const STEP_MOBILE = CARD_W_MOBILE + 6; // 6px gap on mobile? actually we keep 8 but card is 130
+
+function getStep() {
+  return window.innerWidth <= 520 ? (CARD_W_MOBILE + GAP) : STEP;
+}
+function getCardW() {
+  return window.innerWidth <= 520 ? CARD_W_MOBILE : CARD_W;
+}
+
+function fillInitialReel() {
+  const items = [];
+  for (let i = 0; i < 30; i++) items.push(pickRandom());
+  reel.innerHTML = items.map(itemHTML).join("");
+  reel.style.transform = "translateX(0)";
+}
+
+fillInitialReel();
+
+// ————————— AUDIO (tick sounds) —————————
+let audioCtx = null;
+function getAudio() {
+  if (!audioCtx) {
+    try {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    } catch (e) { audioCtx = null; }
+  }
+  return audioCtx;
+}
+function playTick(freq = 880) {
+  const ctx = getAudio();
+  if (!ctx) return;
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.type = "square";
+  osc.frequency.value = freq;
+  const t = ctx.currentTime;
+  gain.gain.setValueAtTime(0.0, t);
+  gain.gain.linearRampToValueAtTime(0.06, t + 0.002);
+  gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.05);
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+  osc.start(t);
+  osc.stop(t + 0.06);
+}
+function playWinChime(rarity) {
+  const ctx = getAudio();
+  if (!ctx) return;
+  const freqs = {
+    consumer: [440],
+    industrial: [523, 659],
+    milspec: [523, 659, 784],
+    restricted: [523, 659, 784, 988],
+    classified: [523, 659, 784, 988, 1175],
+    covert: [392, 523, 659, 784, 988, 1175],
+    rare: [523, 659, 784, 988, 1318, 1568, 2093],
+  }[rarity] || [523, 659];
+  freqs.forEach((f, i) => {
+    setTimeout(() => {
+      const osc = ctx.createOscillator();
+      const g = ctx.createGain();
+      osc.type = "triangle";
+      osc.frequency.value = f;
+      const t = ctx.currentTime;
+      g.gain.setValueAtTime(0, t);
+      g.gain.linearRampToValueAtTime(0.1, t + 0.01);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + 0.4);
+      osc.connect(g); g.connect(ctx.destination);
+      osc.start(t); osc.stop(t + 0.45);
+    }, i * 70);
+  });
+}
+
+// ————————— SPIN LOGIC —————————
+let spinning = false;
+
+function openCase() {
+  if (spinning) return;
+  spinning = true;
+  openBtn.disabled = true;
+  shuffleBtn.disabled = true;
+
+  track("open_case", {
+    active_items: places.length - excluded.size,
+    total_items: places.length
+  });
+
+  // Warm up audio (user gesture)
+  getAudio();
+
+  // 1. Pick winner
+  const winner = pickWeighted();
+
+  // 2. Build reel of ~60 items, place winner at WINNER_IDX
+  const TOTAL = 62;
+  const WINNER_IDX = 55;
+  const items = [];
+  for (let i = 0; i < TOTAL; i++) {
+    if (i === WINNER_IDX) items.push(winner);
+    else items.push(pickRandom());
+  }
+
+  reel.innerHTML = items.map(itemHTML).join("");
+  reel.classList.remove("spinning");
+  reel.style.transform = "translateX(0)";
+
+  // force reflow
+  void reel.offsetWidth;
+
+  // 3. Compute target
+  const step = getStep();
+  const cardW = getCardW();
+  const viewW = viewport.clientWidth;
+  // center of winner card
+  const winnerCenter = WINNER_IDX * step + cardW / 2 + 8; // +8 is reel padding
+  // slight jitter so it doesn't always land dead-center
+  const jitter = (Math.random() - 0.5) * (cardW * 0.7);
+  const target = winnerCenter - viewW / 2 + jitter;
+
+  // 4. Animate
+  requestAnimationFrame(() => {
+    reel.classList.add("spinning");
+    reel.style.transform = `translateX(${-target}px)`;
+  });
+
+  // 5. Tick sounds via RAF based on card passing the center pointer
+  const spinDuration = 6500;
+  const startTime = performance.now();
+  let lastCardIdx = -1;
+  function trackTicks(now) {
+    if (!spinning) return;
+    const elapsed = now - startTime;
+    if (elapsed > spinDuration) return;
+
+    const reelRect = reel.getBoundingClientRect();
+    const viewRect = viewport.getBoundingClientRect();
+    const centerX = (viewRect.left + viewRect.right) / 2;
+    const relX = centerX - reelRect.left;
+    const cardIdx = Math.floor(relX / step);
+
+    if (cardIdx !== lastCardIdx && cardIdx >= 0 && cardIdx < TOTAL) {
+      lastCardIdx = cardIdx;
+      // variable pitch a bit for flavor
+      playTick(820 + (cardIdx % 4) * 40);
+    }
+    requestAnimationFrame(trackTicks);
+  }
+  requestAnimationFrame(trackTicks);
+
+  // 6. Show result after animation
+  setTimeout(() => {
+    spinning = false;
+    openBtn.disabled = false;
+    shuffleBtn.disabled = false;
+    openBtn.textContent = "Открыть ещё раз";
+    showResult(winner);
+    playWinChime(winner.rarity);
+    addToHistory(winner);
+
+    // GA: что именно выпало
+    track("case_result", {
+      item_name: winner.name,
+      rarity: winner.rarity,
+      category: winner.cat,
+      is_rare: winner.rarity === "rare" || winner.rarity === "covert"
+    });
+  }, spinDuration + 200);
+}
+
+// ————————— RESULT —————————
+const overlay = document.getElementById("result-overlay");
+const resultCard = document.getElementById("result-card");
+const rIcon = document.getElementById("r-icon");
+const rTier = document.getElementById("r-tier");
+const rCat = document.getElementById("r-cat");
+const rName = document.getElementById("r-name");
+const rDesc = document.getElementById("r-desc");
+const rTip = document.getElementById("r-tip");
+const rMap = document.getElementById("r-map");
+const rAgain = document.getElementById("r-again");
+const rClose = document.getElementById("result-close");
+const rExclude = document.getElementById("r-exclude");
+
+let currentResultPlace = null;
+
+function showResult(p) {
+  currentResultPlace = p;
+  const color = getComputedStyle(document.documentElement).getPropertyValue(`--r-${p.rarity}`).trim();
+  resultCard.style.setProperty("--r-color", color);
+  rIcon.textContent = p.icon;
+  rTier.textContent = rarityLabel[p.rarity];
+  rTier.style.color = color;
+  rTier.style.borderColor = color;
+  rCat.textContent = p.cat;
+  rName.textContent = p.name;
+  rDesc.textContent = p.desc;
+  rTip.textContent = "💡 " + p.tip;
+  rMap.href = p.gmaps;
+
+  // update exclude button
+  if (excluded.has(p.name)) {
+    rExclude.textContent = "Убрано";
+    rExclude.disabled = true;
+  } else {
+    rExclude.textContent = "Убрать";
+    rExclude.disabled = false;
+  }
+
+  overlay.classList.add("show");
+}
+
+function hideResult() {
+  overlay.classList.remove("show");
+}
+
+openBtn.addEventListener("click", openCase);
+rAgain.addEventListener("click", () => { hideResult(); setTimeout(openCase, 250); });
+rClose.addEventListener("click", hideResult);
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) hideResult();
+});
+shuffleBtn.addEventListener("click", fillInitialReel);
+
+rExclude.addEventListener("click", () => {
+  if (!currentResultPlace) return;
+  toggleExclusion(currentResultPlace.name);
+  rExclude.textContent = "Убрано ✓";
+  rExclude.disabled = true;
+});
+
+// трекинг открытия карт
+document.getElementById("r-map").addEventListener("click", () => {
+  if (currentResultPlace) {
+    track("map_click", {
+      item_name: currentResultPlace.name,
+      rarity: currentResultPlace.rarity
+    });
+  }
+});
+
+// keyboard: space
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space" && !spinning && !overlay.classList.contains("show")) {
+    e.preventDefault();
+    openCase();
+  }
+  if (e.code === "Escape" && overlay.classList.contains("show")) hideResult();
+});
+
+// ————————— INVENTORY GRID (with exclusion toggles) —————————
+const invGrid = document.getElementById("inv-grid");
+const statItems = document.getElementById("stat-items");
+const rarityOrder = ["rare", "covert", "classified", "restricted", "milspec", "industrial", "consumer"];
+const sortedPlaces = [...places].sort((a, b) => rarityOrder.indexOf(a.rarity) - rarityOrder.indexOf(b.rarity));
+
+function escapeAttr(s) {
+  return String(s).replace(/"/g, "&quot;").replace(/</g, "&lt;");
+}
+
+function renderInventory() {
+  invGrid.innerHTML = sortedPlaces.map(p => {
+    const isEx = excluded.has(p.name);
+    const label = isEx ? "Вернуть в кейс" : "Убрать из кейса";
+    const sym = isEx ? "+" : "×";
+    return `
+      <div class="inv-item rare-${p.rarity}${isEx ? ' excluded' : ''}">
+        <button class="exc-toggle" data-name="${escapeAttr(p.name)}" title="${label}" aria-label="${label}">${sym}</button>
+        <div class="ic">${p.icon}</div>
+        <div class="nm">${p.name}</div>
+      </div>
+    `;
+  }).join("");
+
+  invGrid.querySelectorAll(".exc-toggle").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleExclusion(btn.dataset.name);
+    });
+  });
+}
+
+function updateStats() {
+  const active = places.length - excluded.size;
+  if (statItems) statItems.textContent = active + "/" + places.length;
+
+  // пересчитываем реальный шанс выпадения Rare прямо сейчас
+  const pool = getAvailablePlaces();
+  const totalW = pool.reduce((s, p) => s + (weights[p.rarity] || 1), 0);
+  const rareW = pool
+    .filter(p => p.rarity === "rare")
+    .reduce((s, p) => s + (weights[p.rarity] || 1), 0);
+  const rareChance = totalW > 0 ? (rareW / totalW * 100) : 0;
+  const statRare = document.getElementById("stat-rare");
+  if (statRare) statRare.textContent = rareChance.toFixed(1) + "%";
+}
+
+function toggleExclusion(name) {
+  const wasExcluded = excluded.has(name);
+  if (wasExcluded) excluded.delete(name);
+  else excluded.add(name);
+  saveState();
+  renderInventory();
+  updateStats();
+  // перерисовываем ленту, чтобы исключённые предметы больше не мелькали
+  if (!spinning) fillInitialReel();
+
+  track(wasExcluded ? "item_restored" : "item_excluded", {
+    item_name: name,
+    active_items: places.length - excluded.size
+  });
+}
+
+// ————————— HISTORY —————————
+const historyList = document.getElementById("history-list");
+const historyClearBtn = document.getElementById("history-clear");
+const historyCount = document.getElementById("history-count");
+
+function formatTime(ts) {
+  const d = new Date(ts);
+  const now = new Date();
+  const hh = d.getHours().toString().padStart(2, "0");
+  const mm = d.getMinutes().toString().padStart(2, "0");
+  const isToday = d.toDateString() === now.toDateString();
+  if (isToday) return `Сегодня, ${hh}:${mm}`;
+  const yesterday = new Date(now);
+  yesterday.setDate(now.getDate() - 1);
+  if (d.toDateString() === yesterday.toDateString()) return `Вчера, ${hh}:${mm}`;
+  const months = ["янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек"];
+  return `${d.getDate()} ${months[d.getMonth()]}, ${hh}:${mm}`;
+}
+
+function renderHistory() {
+  if (historyCount) historyCount.textContent = dropHistory.length > 0 ? "· " + dropHistory.length : "";
+  if (dropHistory.length === 0) {
+    historyList.innerHTML = '<div class="history-empty">Здесь появятся выпавшие предметы</div>';
+    return;
+  }
+  historyList.innerHTML = dropHistory.slice(0, 40).map(h => `
+    <div class="history-entry rare-${h.rarity}">
+      <span class="h-icon">${h.icon}</span>
+      <div class="h-body">
+        <div class="h-name">${h.name}</div>
+        <div class="h-meta">${rarityLabel[h.rarity]} · ${formatTime(h.ts)}</div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function addToHistory(p) {
+  dropHistory.unshift({
+    name: p.name,
+    rarity: p.rarity,
+    icon: p.icon,
+    ts: Date.now()
+  });
+  if (dropHistory.length > 50) dropHistory = dropHistory.slice(0, 50);
+  saveState();
+  renderHistory();
+}
+
+let clearConfirmPending = false;
+let clearConfirmTimer = null;
+
+function resetClearButton() {
+  clearConfirmPending = false;
+  historyClearBtn.textContent = "Очистить";
+  historyClearBtn.classList.remove("confirm");
+  if (clearConfirmTimer) {
+    clearTimeout(clearConfirmTimer);
+    clearConfirmTimer = null;
+  }
+}
+
+historyClearBtn.addEventListener("click", () => {
+  if (dropHistory.length === 0) return;
+
+  if (!clearConfirmPending) {
+    // Первый клик — просим подтверждение
+    clearConfirmPending = true;
+    historyClearBtn.textContent = "Точно? Кликни ещё";
+    historyClearBtn.classList.add("confirm");
+    clearConfirmTimer = setTimeout(resetClearButton, 3000);
+  } else {
+    // Второй клик — очищаем
+    const prevCount = dropHistory.length;
+    dropHistory = [];
+    saveState();
+    renderHistory();
+    resetClearButton();
+    track("history_cleared", { items_cleared: prevCount });
+  }
+});
+
+// initial render
+renderInventory();
+updateStats();
+renderHistory();
+</script>
+</body>
+</html>

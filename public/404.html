@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404 · ALMATY WALK CASE</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0a0e13;
+    --text: #c7d5e0;
+    --dim: #7a8c99;
+    --accent: #f1a632;
+    --accent-2: #ffbd4a;
+    --stroke: rgba(255, 255, 255, 0.1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(75, 105, 255, 0.08), transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(241, 166, 50, 0.05), transparent 50%),
+      linear-gradient(180deg, #0a0e13 0%, #10161c 100%);
+    color: var(--text);
+    font-family: "Rajdhani", sans-serif;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 24px,
+        rgba(255,255,255,0.015) 24px,
+        rgba(255,255,255,0.015) 25px
+      );
+    pointer-events: none;
+  }
+  .wrap { position: relative; z-index: 1; max-width: 480px; }
+  .eyebrow {
+    display: inline-block;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 6px 16px;
+    border: 1px solid rgba(241, 166, 50, 0.4);
+    border-radius: 2px;
+    background: rgba(241, 166, 50, 0.05);
+    margin-bottom: 28px;
+  }
+  .code {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: clamp(80px, 22vw, 160px);
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: -0.02em;
+  }
+  .code .accent { color: var(--accent); font-style: italic; }
+  h1 {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 16px 0 14px;
+  }
+  p {
+    color: var(--dim);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+  .btn {
+    display: inline-block;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    color: #0a0e13;
+    background: linear-gradient(180deg, var(--accent-2) 0%, var(--accent) 100%);
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    box-shadow: 0 6px 0 #a86d0d;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    transition: transform 0.12s ease, filter 0.12s ease;
+  }
+  .btn:hover { transform: translateY(-1px); filter: brightness(1.08); }
+  .btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #a86d0d; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <span class="eyebrow">Unknown drop</span>
+    <div class="code">4<span class="accent">0</span>4</div>
+    <h1>Страница не выпала</h1>
+    <p>Такого предмета нет в кейсе. Вернись и крути ещё раз — удача распределяется случайно.</p>
+    <a class="btn" href="/">На главную</a>
+  </div>
+</body>
+</html>
